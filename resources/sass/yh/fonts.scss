@@ -1,0 +1,34 @@
+/*
+    Name: Frontend Toolkit
+    Version: 0.1
+    Author: yodahack
+    Website: https://github.com/yodahack
+    License: MIT
+*/
+.yh {
+    &-fs {
+        @for $i from 1 through 50 {
+            &-#{$i} {
+                font-size: #{$i}px;
+            }
+        }
+    }
+
+    &-fw {
+        @for $i from 1 to 9 {
+            &-#{$i} {
+                font-weight: #{$i*100};
+            }
+        }
+    }
+
+    &-tt {
+        &-c {
+            text-transform: capitalize;
+        }
+
+        &-u {
+            text-transform: uppercase;
+        }
+    }
+}

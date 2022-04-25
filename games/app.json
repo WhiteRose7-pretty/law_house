@@ -1,0 +1,22 @@
+{
+  "name": "iusvitae game socket engine",
+  "description": "engine to process game status and chat",
+  "website": "",
+  "repository": "",
+  "logo": "",
+  "success_url": "/",
+  "keywords": [
+    "node",
+    "express",
+    "socket.io",
+    "realtime",
+    "websocket"
+  ],
+  "scripts": {
+  },
+  "addons": [
+  ],
+  "env": {
+    "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-nodejs"
+  }
+}

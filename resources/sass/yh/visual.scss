@@ -1,0 +1,40 @@
+/*
+    Name: Frontend Toolkit
+    Version: 0.1
+    Author: yodahack
+    Website: https://github.com/yodahack
+    License: MIT
+*/
+.yh {
+    &-v {
+        &-o {
+            @for $i from 0 through 100 {
+                &-#{$i} {
+                    opacity: $i/100;
+                }
+            }
+        }
+
+        &-p {
+            &-a {
+                position: absolute;
+            }
+
+            &-f {
+                position: fixed;
+            }
+
+            &-r {
+                position: relative;
+            }
+
+            &-sc {
+                position: static;
+            }
+
+            &-sy {
+                position: sticky;
+            }
+        }
+    }
+}

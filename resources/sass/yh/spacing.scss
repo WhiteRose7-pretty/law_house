@@ -1,0 +1,16 @@
+/*
+    Name: Frontend Toolkit
+    Version: 0.1
+    Author: yodahack
+    Website: https://github.com/yodahack
+    License: MIT
+*/
+.yh {
+    &-gap {
+        @for $i from 1 through 20 {
+            &-#{$i} {
+                height: #{$i}0px;
+            }
+        }
+    }
+}

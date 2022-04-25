@@ -1,0 +1,95 @@
+body.admin {
+    .sidebar {
+        // background: linear-gradient(to bottom, #29437A, #8481D5);
+        background: linear-gradient(to bottom, #C27047, #7A2D29);
+
+        #sidebarCollapse {
+            background: #B26440;
+        }
+
+        #sidebarApp {
+            background: rgba(#12879f,0.5);
+            &:hover {
+                background: #12879f;
+            }
+        }
+
+        ul {
+            li {
+                a {
+                    &.router-link-active {
+                        color: #fff;
+                        background: rgba(#cc6e75,0.5);
+                    }
+
+                    &:not(.router-link-active):hover {
+                        color: #411E16;
+                        background: rgba(#fff,0.3);
+                    }
+                }
+
+                &.spacer {
+                    padding: 0 10px;
+
+                    hr {
+                        margin: 5px 0;
+                        border: 0;
+                        height: 1px;
+                        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    #content, #modals-container {
+        .ius {
+            .nav-tabs {
+                li {
+                  a {
+                      display: inline-block;
+                      color: #333;
+                      opacity: 0.7;
+                      padding: 0.5em 2em;
+                      margin: 1px !important;
+                      font-size: 18px;
+                      font-weight: 500;
+                      border-bottom: 1px #fafafa solid;
+                      &.active {
+                          background-color: #d9d9d9;
+                          border-bottom: 1px #ccc solid;
+                      }
+                  }
+                }
+            }
+        }
+
+
+        .datetime-picker{
+            .input-wrapper{
+                border: 0;
+            }
+        }
+
+    }
+
+    .vm--modal{
+        overflow-y: scroll;
+        -ms-overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    #modals-container {
+        .ius {
+            padding: 2rem 1rem ;
+        }
+    }
+
+    .card-body{
+        overflow: auto;
+    }
+
+
+}
