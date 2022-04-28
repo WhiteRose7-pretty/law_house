@@ -36,10 +36,10 @@
                                                                                                     class="btn btn-outline-white">Get
                                     started</a></p>
                         </div>
-                        <div class="col-lg-4 iphone-wrap d-none">
-                            <img src="/img/phone_1.png" alt="Image" class="phone-1" data-aos="fade-right">
-                            <img src="/img/phone_2.png" alt="Image" class="phone-2" data-aos="fade-right"
-                                 data-aos-delay="200">
+                        <div class="col-lg-4 iphone-wrap">
+                            <img src="/img/header/1.png" alt="Image" class="phone-1" data-aos="fade-right">
+{{--                            <img src="/img/phone_2.png" alt="Image" class="phone-2" data-aos="fade-right"--}}
+{{--                                 data-aos-delay="200">--}}
                         </div>
                     </div>
                 </div>
@@ -59,128 +59,58 @@
                             kupowania pakietu</p>
                     </div>
                 </div>
-
                 <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
+                    @foreach($promotions as $promotion)
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
-                            <img src="/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                            <img src="{{ $promotion->image }}" class="img-fluid" alt="">
                             <div class="portfolio-info">
-                                <h4>Stale powiększana baza kilkunastu tysięcy pytań testowych</h4>
+                                <h4>{{ $promotion->title }}</h4>
                                 <div class="portfolio-links">
-                                    <a href="/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
-                                       class="portfokio-lightbox" title="Nauka z dowolnego miejsca"><i
+                                    <a href="{{ $promotion->image }}" data-gallery="portfolioGallery"
+                                       class="portfokio-lightbox" title="{{ $promotion->title }}"><i
                                             class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                                    <a href="/czytaj/{{$promotion->title_uri}}" title="More Details"><i class="bi bi-link"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
-                                <div class="portfolio-links">
-                                    <a href="/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
-                                       class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 2</h4>
-                                <p>App</p>
-                                <div class="portfolio-links">
-                                    <a href="/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
-                                       class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
+                    @endforeach
                 </div>
-
             </div>
-
         </section>
         <!-- End Portfolio Section -->
 
 
         <!-- ======= Portfolio Section ======= -->
         <section id="portfolio1" class="portfolio">
-
             <div class="container" data-aos="fade-up">
-
                 <div class="row justify-content-center text-center mb-5">
                     <div class="col-md-8 aos-init aos-animate" data-aos="fade-up">
-                        <h2 class="section-heading">Słuchaj aktów prawnych czytanych przez lektora</h2>
-                        <p class="mt-4">Kupując wybrany pakiet uzyskujesz możliwość odsłuchiwania aktów prawnych zawartych w
-                            pakiecie</p>
+                        <h2 class="section-heading">Przeglądaj akty prawne</h2>
+                        <p class="mt-4">Baza ponad 100 aktów prawnych codziennie aktualizowanych. Nie wymaga rejestracji ani
+                            kupowania pakietu</p>
                     </div>
                 </div>
-
                 <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Stale powiększana baza kilkunastu...</h4>
-                                <div class="portfolio-links">
-                                    <a href="/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
-                                       class="portfokio-lightbox" title="Stale powiększana baza kilkunastu tysięcy pytań testowych"><i
-                                            class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                    @foreach($promotions_2 as $promotion)
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                            <div class="portfolio-wrap">
+                                <img src="{{ $promotion->image }}" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <h4>{{ $promotion->title }}</h4>
+                                    <div class="portfolio-links">
+                                        <a href="{{ $promotion->image }}" data-gallery="portfolioGallery"
+                                           class="portfokio-lightbox" title="{{ $promotion->title }}"><i
+                                                class="bi bi-plus"></i></a>
+                                        <a href="/czytaj2/{{$promotion->title_uri}}" title="More Details"><i class="bi bi-link"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
-                                <div class="portfolio-links">
-                                    <a href="/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
-                                       class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 2</h4>
-                                <p>App</p>
-                                <div class="portfolio-links">
-                                    <a href="/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
-                                       class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
+                    @endforeach
                 </div>
-
             </div>
-
         </section>
         <!-- End Portfolio Section -->
 
@@ -253,57 +183,55 @@
                 </div>
 
                 <div class="row gy-4" data-aos="fade-left">
+                    @foreach($packages as $p)
+                        @if($p->visible)
+                            @if($p->free & $p->name == 'Konstytucja')
+                                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                                    <div class="box">
+                                        <span class="featured">Featured</span>
+                                        <h3 style="color: #65c600;">{{$p->name}}</h3>
+                                        <div class="price">
+                                            @if($p->free)
+                                                darmowy
+                                            @else
+                                                od {{$p->price1m}} zł
+                                            @endif
+                                        </div>
+                                        <img src="/img/pricing-starter.png" class="img-fluid d-none" alt="">
+                                        <p>
+                                            {{$p->info}}
+                                        </p>
+                                        <a href="{{route('app',['any'=>'shop/form/'.$p->id.'/1'])}}" class="btn-buy">Buy Now</a>
+                                    </div>
+                                </div>
+                           @endif
+                        @endif
+                    @endforeach
 
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="box">
-                            <h3 style="color: #07d5c0;">Konstytucja</h3>
-                            <div class="price"><sup>$</sup>0<span> / mo</span></div>
-                            <img src="/img/pricing-free.png" class="img-fluid" alt="">
-                            <p>
-                                Darmowy pakiet z pytaniami z Konstytucji
-                            </p>
-                            <a href="#" class="btn-buy">Buy Now</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="box">
-                            <span class="featured">Featured</span>
-                            <h3 style="color: #65c600;">Aplikacja sędziowska i prokuratorska</h3>
-                            <div class="price"><sup>$</sup>19<span> / mo</span></div>
-                            <img src="/img/pricing-starter.png" class="img-fluid" alt="">
-                            <p>
-                                Pakiet zawiera ponad 9500 pytań przygotowujących do egzaminu na aplikację sędziowską i
-                                prokuratorską
-                            </p>
-                            <a href="#" class="btn-buy">Buy Now</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="box">
-                            <h3 style="color: #ff901c;">Aplikacja uzupełniająca sędziowska</h3>
-                            <div class="price"><sup>$</sup>29<span> / mo</span></div>
-                            <img src="/img/pricing-business.png" class="img-fluid" alt="">
-                            <p>
-                                Pakiet zawiera ponad 8500 pytań przygotowujących do egzaminu na aplikację uzupełniającą
-                                sędziowską. Pytania dotyczą aktów prawnych zawartych w wykazie na egzamin w 2022 r.
-                            </p>
-                            <a href="#" class="btn-buy">Buy Now</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="box">
-                            <h3 style="color: #ff0071;">Aplikacja radcowska i adwokacka</h3>
-                            <div class="price"><sup>$</sup>49<span> / mo</span></div>
-                            <img src="/img/pricing-ultimate.png" class="img-fluid" alt="">
-                            <p>Pakiet zawiera ponad 11 000 pytań przygotowujących do egzaminu na aplikację radcowską i
-                                aplikację adwokacką</p>
-                            <a href="#" class="btn-buy">Buy Now</a>
-                        </div>
-                    </div>
-
+                        @foreach($packages as $p)
+                            @if($p->visible)
+                                @if(!($p->free & $p->name == 'Konstytucja'))
+                                    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                                        <div class="box">
+                                            <span class="featured d-none">Featured</span>
+                                            <h3 style="color: #65c600;">{{$p->name}}</h3>
+                                            <div class="price">
+                                                @if($p->free)
+                                                    darmowy
+                                                @else
+                                                    od {{$p->price1m}} zł
+                                                @endif
+                                            </div>
+                                            <img src="/img/pricing-starter.png" class="img-fluid d-none" alt="">
+                                            <p>
+                                                {{$p->info}}
+                                            </p>
+                                            <a href="{{route('app',['any'=>'shop/form/'.$p->id.'/1'])}}" class="btn-buy">Buy Now</a>
+                                        </div>
+                                    </div>
+                                @endif
+                            @endif
+                        @endforeach
 
                 </div>
 

@@ -151,42 +151,43 @@ class ApiPackagesController extends Controller
         }
 
         $sets = PackageSet::where('package_id',$p->id)->get();
-        $user_packages = UserPackage::where('package_id', $p->id)->get();
+//        $user_packages = UserPackage::where('package_id', $p->id)->get();
         foreach($sets as $s) {
-            if (empty($ids[$s->questions_set_id])) {
-                foreach($user_packages as $user_package) {
-                    $u_pqs1 = UserPackageQuestionsSet::where('user_package_id', $user_package->id)->
-                    where('questions_set_id', $s->questions_set_id)->get();
-                    foreach ($u_pqs1 as $u_pq) {
-                        $u_pq->delete();
-                    }
-                }
+            if (empty($ids[$s->id])) {
+//                foreach($user_packages as $user_package) {
+//                    $u_pqs1 = UserPackageQuestionsSet::where('user_package_id', $user_package->id)->
+//                    where('questions_set_id', $s->questions_set_id)->get();
+//                    foreach ($u_pqs1 as $u_pq) {
+//                        $u_pq->delete();
+//                    }
+//                }
                 $s->delete();
-
             } else {
-                unset($ids[$s->questions_set_id]);
+                unset($ids[$s->id]);
             }
         }
 
         if (!empty($ids)) {
-            foreach($ids as $questions_set_id => $package_id) {
-                $ps = new PackageSet(compact('questions_set_id','package_id'));
+            foreach($ids as $document_id => $package_id) {
+                $ps = new PackageSet(compact('document_id','package_id'));
+                $ps->document_id = $document_id;
+                $ps->package_id = $package_id;
                 $ps->save();
 
-                foreach($user_packages as $user_package){
-                    $u_pqs = new UserPackageQuestionsSet();
-                    $u_pqs->user_package_id = $user_package->id;
-                    $u_pqs->user_id = $user_package->user_id;
-                    $u_pqs->questions_set_id = $questions_set_id;
-                    if($user_package->type == 'free'){
-                        $u_pqs->free = 1;
-                    }
-                    $u_pqs->valid_until = $user_package->valid_until;
-                    $u_pqs->save();
-                }
+//                foreach($user_packages as $user_package){
+//                    $u_pqs = new UserPackageQuestionsSet();
+//                    $u_pqs->user_package_id = $user_package->id;
+//                    $u_pqs->user_id = $user_package->user_id;
+//                    $u_pqs->questions_set_id = $questions_set_id;
+//                    if($user_package->type == 'free'){
+//                        $u_pqs->free = 1;
+//                    }
+//                    $u_pqs->valid_until = $user_package->valid_until;
+//                    $u_pqs->save();
+//                }
             }
         }
-        return response()->json();
+        return response()->json(['ids'=>$ids, ]);
     }
 
 }

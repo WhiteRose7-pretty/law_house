@@ -75,6 +75,7 @@ class ContentController extends Controller
         $categories = [
             'aktualnosci' => 'news',
             'czytaj' => 'promo',
+            'czytaj2' => 'promo2',
             'informacje' => 'info',
             'przepisy-prawne' => 'regula',
         ];

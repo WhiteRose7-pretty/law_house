@@ -98,8 +98,7 @@
                     <h3>Wybierz zestawy pytań</h3>
                     <div v-for="set in package.sets" class="form-check">
                         <input type="checkbox" class="form-check-input" v-model="set.selected">
-                        <label class="form-check-label">{{ set.group }}<span
-                            v-if="set.group"> / </span>{{ set.name }}</label>
+                        <label class="form-check-label">{{ set.name }}</label>
                     </div>
                 </div>
                 <div class="text-center">
@@ -164,7 +163,7 @@ export default {
                 p.sets = JSON.parse(JSON.stringify(this.sets));
             }
             for (var j = 0; j < s.length; j++) {
-                p.sets[s[j].questions_set_id].selected = true;
+                p.sets[s[j].document_id].selected = true;
             }
             this.package = p;
         },
@@ -198,7 +197,7 @@ export default {
             this.loading = true;
             axios
                 .post(
-                    '/api/admin/questions/sets/list/all',
+                    '/api/admin/documents/all',
                     {
                         hash_id: yh.auth.hash_id,
                     }

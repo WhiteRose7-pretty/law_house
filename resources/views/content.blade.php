@@ -33,6 +33,6 @@
     <div class="yh-gap-10"></div>
 </div>
 
-@include('layouts.parts.front-footer')
+{{--@include('layouts.parts.front-footer')--}}
 
 @endsection

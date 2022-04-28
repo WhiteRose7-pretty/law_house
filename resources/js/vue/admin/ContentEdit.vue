@@ -118,12 +118,14 @@ export default {
             categories: {
                 news: "Aktualności",
                 promo: "Promocyjne",
+                promo2: "Promocyjne2",
                 info: "Stałe",
                 regula: "Przepisy prawne",
             },
             categories_paths: {
                 news: '/aktualnosci/',
                 promo: '/czytaj/',
+                promo2: '/czytaj2/',
                 info: '/informacje/',
                 regula: '/przepisy-prawne/'
             },

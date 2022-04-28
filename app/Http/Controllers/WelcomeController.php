@@ -42,8 +42,17 @@ class WelcomeController extends Controller
             $promotion->image = $m;
         }
 
+        $promotions2 = Content::where('category', 'promo2')->get();
+        foreach ($promotions2 as $promotion2){
+            $m2 = $promotion2->getFirstMedia();
+            if (!empty($m2)) {
+                $m2 = $m2->getUrl('big');
+            }
+            $promotion2->image = $m2;
+        }
+
         return view('welcome',['packages' => Package::where('visible', 1)->get(),
-            'promotions' => $promotions]);
+            'promotions' => $promotions, 'promotions_2' => $promotions2]);
     }
 
 }

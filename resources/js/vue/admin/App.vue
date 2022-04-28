@@ -44,7 +44,7 @@
                             Użytkownicy
                         </router-link>
                     </li>
-                    <li class="d-none">
+                    <li class="">
                         <router-link :to="{ name: 'content' }">
                             <span>
                                 <i class="fas fa-sitemap"></i>
@@ -53,7 +53,7 @@
                         </router-link>
                     </li>
                     <li>
-                        <router-link :to="{ name: 'documents' , params: { page: 1, limit:5}}">
+                        <router-link :to="{ name: 'documents' , params: { page: 1, limit:20}}">
                             <span>
                                 <i class="fas fa-file-powerpoint"></i>
                             </span>
@@ -68,7 +68,7 @@
                             Pytania
                         </router-link>
                     </li>
-                    <li v-if="is_admin || is_subadmin" class="d-none">
+                    <li v-if="is_admin || is_subadmin">
                         <router-link :to="{ name: 'packages' }">
                             <span>
                                 <i class="fas fa-archive"></i>

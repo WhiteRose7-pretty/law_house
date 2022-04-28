@@ -127,8 +127,13 @@ class ApiLawController extends Controller
 
     public function documentsListAll()
     {
+        $tmp = LawDocument::select('id', 'updated_at', 'name', 'identifier', 'signed_at', 'info')->get();
+        $results = [];
+        foreach ($tmp as $qs) {
+            $results[$qs->id] = $qs;
+        }
         return response()->json([
-            'results' => LawDocument::listAllWithElementsAndContent(),
+            'results' => $results,
         ]);
     }
 

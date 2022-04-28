@@ -29,6 +29,7 @@ Route::get('/ping', 'Auth\HashController@ping');
 Route::get('/lista/aktualnosci/{page?}','ContentController@news')->name('news.list');
 Route::get('/aktualnosci/{title_uri}','ContentController@view')->name('news');
 Route::get('/czytaj/{title_uri}','ContentController@view')->name('promo');
+Route::get('/czytaj2/{title_uri}','ContentController@view')->name('promo2');
 Route::get('/informacje/{title_uri}','ContentController@view')->name('info');
 Route::get('/przepisy-prawne/{title_uri}','ContentController@view')->name('regula');
 
