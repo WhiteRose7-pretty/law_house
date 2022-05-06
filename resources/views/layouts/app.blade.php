@@ -33,7 +33,7 @@
 
 @section('body_content')
 
-    <header id="header" class="fixed-top d-flex align-items-center" style="background: rgba(39, 70, 133, 0.8)">
+    <header id="header" class="fixed-top d-flex align-items-center">
         <div class="container d-flex justify-content-between align-items-center logo">
             <h1><img src="/img/logo.png" title="ustawoteka" alt="ustawoteka" class="img-fluid">
                 <a href="/">ustawoteka</a></h1>

@@ -14,7 +14,7 @@
 
     <link href="/css/style.css" rel="stylesheet">
 
-{{--    <script src="{{ mix('/js/front.js') }}"></script>--}}
+    <script src="{{ mix('/js/front.js') }}"></script>
 @endsection
 
 @section('body_script')

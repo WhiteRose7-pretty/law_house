@@ -39,7 +39,7 @@
 
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-success">
+                                <button type="submit" class="btn btn-primary">
                                     Wyślij
                                 </button>
                             </div>

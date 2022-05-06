@@ -66,11 +66,11 @@
                                 @if (Route::has('password.request'))
 
 
-                                <a class="d-block btn-link pt-4" href="{{ route('password.request') }}">
+                                <a class="d-block btn-link pt-4 text-body" href="{{ route('password.request') }}">
                                     Zapomniałeś hasła?
                                 </a>
                                 @endif
-                                <a class="d-block btn-link pt-2 pb-4" href="{{ route('register') }}">
+                                <a class="d-block btn-link pt-2 pb-4 text-body" href="{{ route('register') }}">
                                     Zarejestruj się.
                                 </a>
                             </div>

@@ -44,8 +44,8 @@
 @charset "UTF-8";
 
 :root {
-  --mdc-theme-primary: #00c189;
-  --mdc-theme-secondary: #4dc0b5;
+  --mdc-theme-primary: #ff9800;
+  --mdc-theme-secondary: #ffc107;
   --mdc-theme-background: #fff;
   --mdc-theme-surface: #fff;
   --mdc-theme-error: #e3342f;
@@ -15833,8 +15833,8 @@ h2 {
 }
 
 :root {
-  --mdc-theme-primary: #00c189;
-  --mdc-theme-secondary: #4dc0b5;
+  --mdc-theme-primary: #ff9800;
+  --mdc-theme-secondary: #ffc107;
   --mdc-theme-background: #fff;
   --mdc-theme-surface: #fff;
   --mdc-theme-error: #e3342f;
@@ -16097,7 +16097,7 @@ body.welcome .footer p {
 }
 
 body.welcome .footer p a {
-  color: #fff;
+  color: #444444;
 }
 
 @media (max-width: 991px) {

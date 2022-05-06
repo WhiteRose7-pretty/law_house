@@ -117,7 +117,7 @@
             </nav>
 
                 <div id="content">
-                    <div class="yh-gap-7"></div>
+                    <div class="yh-gap-10"></div>
 
                     <router-view class="inner-wrapper"></router-view>
 

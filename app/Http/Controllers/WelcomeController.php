@@ -55,4 +55,28 @@ class WelcomeController extends Controller
             'promotions' => $promotions, 'promotions_2' => $promotions2]);
     }
 
+    public function index1()
+    {
+        $promotions = Content::where('category', 'promo')->get();
+        foreach ($promotions as $promotion){
+            $m = $promotion->getFirstMedia();
+            if (!empty($m)) {
+                $m = $m->getUrl('big');
+            }
+            $promotion->image = $m;
+        }
+
+        $promotions2 = Content::where('category', 'promo2')->get();
+        foreach ($promotions2 as $promotion2){
+            $m2 = $promotion2->getFirstMedia();
+            if (!empty($m2)) {
+                $m2 = $m2->getUrl('big');
+            }
+            $promotion2->image = $m2;
+        }
+
+        return view('welcome1',['packages' => Package::where('visible', 1)->get(),
+            'promotions' => $promotions, 'promotions_2' => $promotions2]);
+    }
+
 }

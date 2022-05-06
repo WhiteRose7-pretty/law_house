@@ -97,7 +97,7 @@
                         </div>
 
                         <div class="pt-2 text-center">
-                            <a href="{{ route('login') }}">Posiadasz już konto? Zaloguj się!</a>
+                            <a class="btn-link text-body" href="{{ route('login') }}">Posiadasz już konto? Zaloguj się!</a>
                         </div>
                     </form>
                 </div>

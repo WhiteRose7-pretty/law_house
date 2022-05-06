@@ -10,7 +10,7 @@
 
     <section class="hero-section" id="hero">
 
-        <div class="wave">
+        <div class="wave d-none">
 
             <svg width="100%" height="355px" viewBox="0 0 1920 355" version="1.1" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -28,18 +28,17 @@
             <div class="row align-items-center">
                 <div class="col-12 hero-text-image">
                     <div class="row">
-                        <div class="col-lg-8 text-center text-lg-start">
-                            <h1 data-aos="fade-right">Skutecznie przygotuj się do
-                                egzaminu z ius vitae</h1>
-                            <p class="mb-5" data-aos="fade-right" data-aos-delay="100">Innowacyjna platforma edukacyjna.</p>
+                        <div class="col-lg-6 text-center text-lg-start" style="padding-top: 40px">
+                            <h1 data-aos="fade-right">Ucz się z ustawoteką gdziekolwiek jesteś</h1>
+                            <p class="mb-5" data-aos="fade-right" data-aos-delay="100" style="font-size: 24px;">Innowacyjna platforma edukacyjna</p>
                             <p data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500"><a href="#"
-                                                                                                    class="btn btn-outline-white">Get
-                                    started</a></p>
+                                                                                                    class="btn btn-primary">Pełna oferta</a></p>
                         </div>
-                        <div class="col-lg-4 iphone-wrap">
-                            <img src="/img/header/1.png" alt="Image" class="phone-1" data-aos="fade-right">
-{{--                            <img src="/img/phone_2.png" alt="Image" class="phone-2" data-aos="fade-right"--}}
-{{--                                 data-aos-delay="200">--}}
+                        <div class="col-lg-6 iphone-wrap d-lg-block d-none" style="text-align: right;">
+{{--                            <img src="/img/header/10.jpg" alt="Image" class="phone-3" data-aos="fade-right" style="width: 100%; object-fit: cover;">--}}
+                            <img src="/img/header/11.jpg" alt="Image" class="phone-1" data-aos="fade-right" style="height: 600px; object-fit: cover;">
+                            <div class="phone-2" data-aos="fade-right" style="position: absolute; top:0; right: 0;"
+                                 data-aos-delay="200"></div>
                         </div>
                     </div>
                 </div>
@@ -52,7 +51,7 @@
         <!-- ======= Portfolio Section ======= -->
         <section id="portfolio" class="portfolio">
             <div class="container" data-aos="fade-up">
-                <div class="row justify-content-center text-center mb-5">
+                <div class="row justify-content-center text-center mb-3">
                     <div class="col-md-8 aos-init aos-animate" data-aos="fade-up">
                         <h2 class="section-heading">Przeglądaj akty prawne</h2>
                         <p class="mt-4">Baza ponad 100 aktów prawnych codziennie aktualizowanych. Nie wymaga rejestracji ani
@@ -85,7 +84,7 @@
         <!-- ======= Portfolio Section ======= -->
         <section id="portfolio1" class="portfolio">
             <div class="container" data-aos="fade-up">
-                <div class="row justify-content-center text-center mb-5">
+                <div class="row justify-content-center text-center mb-3">
                     <div class="col-md-8 aos-init aos-animate" data-aos="fade-up">
                         <h2 class="section-heading">Przeglądaj akty prawne</h2>
                         <p class="mt-4">Baza ponad 100 aktów prawnych codziennie aktualizowanych. Nie wymaga rejestracji ani
@@ -176,7 +175,7 @@
 
             <div class="container" data-aos="fade-up">
 
-                <div class="row justify-content-center text-center mb-5">
+                <div class="row justify-content-center text-center mb-3">
                     <div class="col-md-8 aos-init aos-animate" data-aos="fade-up">
                         <h2 class="section-heading">Nasza oferta</h2>
                     </div>
@@ -189,7 +188,7 @@
                                 <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
                                     <div class="box">
                                         <span class="featured">Featured</span>
-                                        <h3 style="color: #65c600;">{{$p->name}}</h3>
+                                        <h3 style="color: #ec8d06;">{{$p->name}}</h3>
                                         <div class="price">
                                             @if($p->free)
                                                 darmowy
@@ -214,7 +213,7 @@
                                     <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
                                         <div class="box">
                                             <span class="featured d-none">Featured</span>
-                                            <h3 style="color: #65c600;">{{$p->name}}</h3>
+                                            <h3 style="color: #ec8d06;">{{$p->name}}</h3>
                                             <div class="price">
                                                 @if($p->free)
                                                     darmowy
@@ -589,6 +588,8 @@
         @include('layouts.parts.front-footer')
 
     </div>
+
+    @include('layouts.parts.front-footer')
 
     <div class="modal fade" tabindex="-1" role="dialog" id="modal-promotion" data-backdrop="true"
          aria-labelledby="modal-cookies" aria-hidden="true">
