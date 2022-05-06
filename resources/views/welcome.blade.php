@@ -29,21 +29,26 @@
                 <div class="col-12 hero-text-image">
                     <div class="row">
                         <div class="col-lg-6 text-center text-lg-start" style="padding-top: 40px">
-                            <h1 data-aos="fade-right">Ucz się z ustawoteką gdziekolwiek jesteś</h1>
-                            <p class="mb-5" data-aos="fade-right" data-aos-delay="100" style="font-size: 24px;">Innowacyjna platforma edukacyjna</p>
-                            <p data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500"><a href="#"
+                            <h1 data-aos="fade-right">Ucz się z ustawoteką <span>gdziekolwiek jesteś</span></h1>
+                            <p class="mb-5" data-aos="fade-right" data-aos-delay="100" style="font-size: 18px;">Innowacyjna platforma edukacyjna</p>
+                            <p data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500"><a href="#pricing"
                                                                                                     class="btn btn-primary">Pełna oferta</a></p>
                         </div>
-                        <div class="col-lg-6 iphone-wrap d-lg-block d-none" style="text-align: right;">
-{{--                            <img src="/img/header/10.jpg" alt="Image" class="phone-3" data-aos="fade-right" style="width: 100%; object-fit: cover;">--}}
-                            <img src="/img/header/11.jpg" alt="Image" class="phone-1" data-aos="fade-right" style="height: 600px; object-fit: cover;">
-                            <div class="phone-2" data-aos="fade-right" style="position: absolute; top:0; right: 0;"
-                                 data-aos-delay="200"></div>
+                        <div class="col-lg-6 iphone-wrap" style="text-align: right;">
+                            <img src="/img/header/10.jpg" alt="Image" class="phone-3" data-aos="fade-right" style="width: 100%; object-fit: cover; border-radius: 50%;">
+{{--                            <img src="/img/header/11.jpg" alt="Image" class="phone-1" data-aos="fade-right" style="height: 600px; object-fit: cover;">--}}
+{{--                            <div class="phone-2" data-aos="fade-right" style="position: absolute; top:0; right: 0;"--}}
+{{--                                 data-aos-delay="200"></div>--}}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <a href="#main">
+        <svg class="arrow" viewBox="0 0 27 17"><path d="M-.207 3.52L2.31 1.003l11.19 11.19 11.19-11.19 2.517 2.517L13.73 16.997l-.23-.23-.23.23z"></path></svg>
+        </a>
+
 
     </section><!-- End Hero -->
 
